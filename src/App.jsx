@@ -5,7 +5,7 @@ import DefaultLayout from "./layouts/default";
 function App() {
   return (
     <div
-      style={{ backgroundColor: "rgb(225, 240, 253)", width: "100%" }}
+      style={{ backgroundColor: "rgb(245, 255, 255)", width: "100%" }}
       className="App"
     >
       <DefaultLayout />

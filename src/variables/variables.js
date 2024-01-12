@@ -1,7 +1,7 @@
 const variables = {
-  headerHeight: "10vh",
+  headerHeight: "100vh",
   footerHeight: "20vh",
-  minHomeHeight: "90vh",
+  minHomeHeight: "100vh",
 };
 
 export default variables;
