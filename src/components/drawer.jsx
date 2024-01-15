@@ -2,22 +2,15 @@ import React from "react";
 
 import { Stack } from "@mui/material";
 
-const LateralDrawer = ({ opened, anchor }) => {
+import "../styles/drawer.css";
+
+const LateralDrawer = ({ opened }) => {
+  let className = "drawer-off";
+  if (opened) {
+    className = "drawer-on";
+  }
   return (
-    <div
-      className="drawer"
-      style={{
-        width: "calc(92% + 1px)",
-        height: "100vh",
-        marginLeft: "calc(8% - 1px)",
-        backgroundColor: "#FAFAFAEE",
-        position: "absolute",
-        top: "0",
-        left: "0",
-        opacity: opened ? "100%" : "0",
-        transition: "opacity 1s ease-out",
-      }}
-    >
+    <div className={className}>
       <Stack
         direction="column"
         rowGap="20px"
@@ -31,7 +24,7 @@ const LateralDrawer = ({ opened, anchor }) => {
           height: "100%",
           width: "70%",
           transform: opened ? "translateX(0px)" : "translateX(200px)",
-          transition: "transform ease 2s",
+          transition: "transform ease 1.5s",
         }}
       >
         <p>Home</p>

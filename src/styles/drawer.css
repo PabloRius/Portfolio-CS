@@ -1,0 +1,19 @@
+.drawer-off {
+  opacity: 0;
+}
+
+.drawer-on {
+  opacity: 100;
+}
+
+.drawer-on,
+.drawer-off {
+  width: calc(92% + 1px);
+  height: 100vh;
+  margin-left: calc(8% - 1px);
+  background-color: #fafafaee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
+}
