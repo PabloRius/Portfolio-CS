@@ -1,9 +1,9 @@
 import React from "react";
 
-import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import SocialIcon from "./social_icon";
 
 const PhotoSection = () => {
   return (
@@ -29,27 +29,18 @@ const PhotoSection = () => {
           columnGap: "10px",
         }}
       >
-        <IconButton
-          href="https://www.instagram.com/pgriuss/"
-          target="_blank"
-          style={{ border: "solid 1px #111111", borderRadius: "0" }}
-        >
-          <InstagramIcon />
-        </IconButton>
-        <IconButton
-          href="https://github.com/PabloRius"
-          target="_blank"
-          style={{ border: "solid 1px #111111", borderRadius: "0" }}
-        >
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          href="https://www.linkedin.com/in/pablo-rius"
-          target="_blank"
-          style={{ border: "solid 1px #111111", borderRadius: "0" }}
-        >
-          <LinkedInIcon />
-        </IconButton>
+        <SocialIcon
+          icon={<InstagramIcon fontSize={"large"} sx={{ color: "#EF426F" }} />}
+          href={"https://www.instagram.com/pgriuss/"}
+        />
+        <SocialIcon
+          icon={<GitHubIcon fontSize={"large"} sx={{ color: "#333333" }} />}
+          href={"https://github.com/PabloRius"}
+        />
+        <SocialIcon
+          icon={<LinkedInIcon fontSize={"large"} sx={{ color: "#0077b5" }} />}
+          href={"https://www.linkedin.com/in/pablo-rius"}
+        />
       </div>
     </div>
   );

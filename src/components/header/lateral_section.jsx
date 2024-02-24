@@ -60,7 +60,7 @@ const LateralSection = ({ toggleDrawer }) => {
               position: "absolute",
               transform: "rotate(270deg)",
               top: "45%",
-              left: "-22px",
+              left: "-30px",
             }}
           >
             <p
