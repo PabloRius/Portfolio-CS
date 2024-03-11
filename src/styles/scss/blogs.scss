@@ -1,0 +1,97 @@
+@use "./shared/vars" as var;
+
+.blogEntries {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2vw;
+  height: 50vh;
+  width: 90%;
+  margin: 5vh auto 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: center;
+  position: relative;
+
+  .blogEntry {
+    width: 50%;
+    height: calc(100% - 2rem);
+    padding: 0 !important;
+    transition: transform 1s ease;
+    position: absolute;
+    top: 1rem;
+    left: 25%;
+
+    &.left,
+    &.right {
+      p {
+        color: var.$light-text;
+      }
+    }
+
+    &.left {
+      transform: translateX(-72%) scale(0.4);
+      z-index: 1;
+    }
+
+    &.left:hover {
+      transform: translateX(-72%) scale(0.45);
+      z-index: 3;
+    }
+
+    &.center {
+      transform: translateX(0) scale(1);
+      z-index: 2;
+    }
+
+    &.right {
+      transform: translateX(72%) scale(0.4);
+      z-index: 1;
+    }
+
+    &.right:hover {
+      transform: translateX(72%) scale(0.45);
+      z-index: 3;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.8rem;
+    }
+  }
+
+  .blogEntry:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .shiftButtonContainer {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    .shiftButton {
+      position: absolute;
+      height: auto;
+
+      &.leftShiftButton {
+        left: 0.5rem;
+      }
+      &.rightShiftButton {
+        right: 0.5rem;
+      }
+    }
+  }
+  .shiftButton:hover {
+    background-color: transparent;
+  }
+}
+
+.blogEntries::-webkit-scrollbar {
+  width: 0;
+}

@@ -1,0 +1,120 @@
+@use "./shared/vars" as var;
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  border-bottom: var.$divider-border;
+
+  @media screen and (max-width: var.$breakpoint-md) {
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  > .headerLeft,
+  > .headerRight {
+    height: 100%;
+    width: 50%;
+  }
+
+  > .headerLeft {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media screen and (max-width: var.$breakpoint-md) {
+      width: 100% !important;
+      height: auto;
+      > * {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5vh !important;
+      }
+    }
+    > * {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .presentationEmail {
+      height: 30%;
+      line-height: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 5px;
+      align-items: center;
+      > h4 {
+        color: var.$title-text;
+        font-size: 0.8rem;
+      }
+      > h5 {
+        color: var.$light-text;
+        border-bottom: solid var.$light-text 2px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: all 0.5s ease;
+        &:hover {
+          color: var.$black-text;
+          border-bottom: solid var.$black-text 2px;
+        }
+      }
+    }
+    .presentationText {
+      height: auto;
+      > h2 {
+        font-weight: bold;
+        line-height: 52px;
+        margin-bottom: 2vh;
+        font-size: 2.5rem !important;
+      }
+      > p {
+        font-size: 1.1rem;
+        color: var.$grey-text;
+        @media screen and (max-width: var.$breakpoint-md) {
+          font-size: 1rem !important;
+        }
+      }
+    }
+    .presentationCV {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .cvdButton {
+        width: 60%;
+        height: 15vh;
+        font-size: x-large;
+        @media screen and (max-width: var.$breakpoint-md) {
+          width: 75%;
+          height: 10vh;
+          font-size: medium;
+        }
+      }
+    }
+  }
+
+  > .headerRight {
+    width: 50%;
+    height: 100%;
+    overflow-y: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: var.$breakpoint-md) {
+      width: 100% !important;
+      min-height: 50vh;
+      height: auto;
+    }
+
+    .socialIcons {
+      position: relative;
+      top: 2vh;
+      right: 5vh;
+      display: flex;
+      flex-direction: row-reverse;
+      column-gap: 10px;
+    }
+  }
+}

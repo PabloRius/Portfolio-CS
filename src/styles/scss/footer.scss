@@ -1,0 +1,6 @@
+@use "./shared/vars" as var;
+.footer {
+  margin-top: 2rem;
+  padding-top: 4rem;
+  border-top: var.$divider-border;
+}

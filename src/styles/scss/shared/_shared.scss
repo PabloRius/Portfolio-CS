@@ -1,0 +1,69 @@
+@use "./vars" as var;
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+.card {
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+
+  > *,
+  > * > * {
+    border-radius: 1.5rem;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .layer {
+    background-color: rgba(255, 255, 255, 0.65);
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    padding: 1rem;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 2.5rem;
+    color: var.$title-text;
+  }
+  .body {
+    font-weight: 500;
+    font-size: 3vh;
+    line-height: 1.3rem;
+    color: var.$black-text;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Caveat", "cursive", "Georgia" !important;
+  font-size: 2.5vw !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+*:not(h1, h2, h3) {
+  font-family: "-apple-system", "BlinkMacSystemFont", "Oswald", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "sans-serif" !important;
+}
+
+.mobileOnly {
+  @media screen and (max-width: var.$breakpoint-md) {
+    display: block;
+  }
+  @media screen and (min-width: var.$breakpoint-md) {
+    display: none;
+  }
+}

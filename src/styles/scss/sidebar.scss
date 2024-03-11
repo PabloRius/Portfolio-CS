@@ -1,0 +1,55 @@
+@use "./shared/vars" as var;
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  .centerSideBar {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+
+    .centerSideBarTitle {
+      transform: rotate(270deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      height: max-content;
+      text-align: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      text-wrap: nowrap;
+      white-space: nowrap;
+      > h1 {
+        color: var.$title-text;
+        font-size: 2vw !important;
+        @media screen and (max-width: var.$breakpoint-md) {
+          font-size: 3vw !important;
+        }
+      }
+      > p {
+        color: var.$grey-text;
+        font-size: 2vw !important;
+        @media screen and (max-width: var.$breakpoint-md) {
+          font-size: 3vw !important;
+        }
+      }
+      > h4 {
+        color: var.$grey-text;
+        font-size: 1.2vw !important;
+        @media screen and (max-width: var.$breakpoint-md) {
+          font-size: 3vw !important;
+        }
+      }
+      @media screen and (max-width: var.$breakpoint-md) {
+        flex-direction: row;
+        column-gap: 2vh;
+      }
+    }
+  }
+}
